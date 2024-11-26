@@ -3,6 +3,7 @@
     "name": "sportsbuddy",
     "slug": "sportsbuddy",
     "version": "1.0.0",
+    "newArchEnabled": true,
 
     "scheme": "sportsbuddy",
     "web": {
