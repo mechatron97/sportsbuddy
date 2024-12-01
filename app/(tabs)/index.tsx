@@ -1,12 +1,18 @@
 import { Stack } from 'expo-router';
+import { FlatList } from 'react-native-reanimated/lib/typescript/Animated';
 
+import events from '../../assets/events.json';
 import EventListItem from '../../components/EventListItem';
 
 export default function Home() {
   return (
     <>
       <Stack.Screen options={{ title: 'Tab One' }} />
-      <EventListItem />
+      <FlatList
+        className="bg-white"
+        data={events}
+        renderItem={({ item }) => <EventListItem event={item} />}
+      />
     </>
   );
 }
