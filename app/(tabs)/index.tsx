@@ -1,5 +1,6 @@
 import { Stack } from 'expo-router';
-import { FlatList } from 'react-native-reanimated/lib/typescript/Animated';
+import React from 'react';
+import { FlatList } from 'react-native';
 
 import events from '../../assets/events.json';
 import EventListItem from '../../components/EventListItem';
