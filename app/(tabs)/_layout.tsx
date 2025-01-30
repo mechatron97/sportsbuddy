@@ -2,14 +2,14 @@ import { Link, Redirect, Tabs } from 'expo-router';
 
 import { HeaderButton } from '../../components/HeaderButton';
 import { TabBarIcon } from '../../components/TabBarIcon';
+
 import { useAuth } from '~/contexts/AuthProvider';
 
 export default function TabLayout() {
-
   const { isAuthenticated } = useAuth();
 
-  if(!isAuthenticated){
-    return <Redirect href="/login" />
+  if (!isAuthenticated) {
+    return <Redirect href="/login" />;
   }
 
   return (
@@ -20,8 +20,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Home',
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <HeaderButton />
@@ -29,6 +29,15 @@ export default function TabLayout() {
           ),
         }}
       />
+
+      <Tabs.Screen
+        name="create"
+        options={{
+          title: 'New Event',
+          tabBarIcon: ({ color }) => <TabBarIcon name="plus" color={color} />,
+        }}
+      />
+
       <Tabs.Screen
         name="profile"
         options={{
