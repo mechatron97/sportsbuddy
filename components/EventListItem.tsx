@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 import { Link } from 'expo-router';
 import { useEffect } from 'react';
 import { View, Text, Image, Pressable } from 'react-native';
+import SupaImage from './SupaImage';
 
 export default function EventListItem({ event }) {
 
@@ -36,10 +37,10 @@ export default function EventListItem({ event }) {
           <Text className="text-gray-700">{event.location}</Text>
         </View>
         {/* Image */}
-        <Image
-          source={{ uri: event.image_uri }}
+       {event.image_uri && (<SupaImage
+          path={event.image_uri}
           className="aspect-video w-2/5 rounded-xl"
-        />
+        />)}
       </View>
       {/* Footer */}
       <View className="flex-row gap-3">
