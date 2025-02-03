@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 import { Link } from 'expo-router';
 import { useEffect } from 'react';
 import { View, Text, Image, Pressable } from 'react-native';
+
 import SupaImage from './SupaImage';
 
 export default function EventListItem({ event }) {
