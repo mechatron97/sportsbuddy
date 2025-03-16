@@ -29,7 +29,7 @@
 
                 "@rnmapbox/maps",
                 {
-                  "RNMapboxMapsDownloadToken": "sk.eyJ1Ijoic3JpaGFyc2gxOTk3IiwiYSI6ImNtOGM0cTdsajBuNnUybXExdGg0emJwancifQ.YH03WEt9qka9eVG47M4DQQ",
+                  "RNMapboxMapsDownloadToken": "$(EXPO_PUBLIC_MAPBOX_DOWNLOAD_TOKEN)",
                   "RNMapboxMapsVersion": "11.0.0"
                 }
 
