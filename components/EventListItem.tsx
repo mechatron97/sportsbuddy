@@ -2,10 +2,12 @@
 import Feather from '@expo/vector-icons/Feather';
 import dayjs from 'dayjs';
 import { Link } from 'expo-router';
-import { useEffect } from 'react';
-import { View, Text, Image, Pressable } from 'react-native';
+import { useEffect, useState } from 'react';
+import { View, Text, Pressable } from 'react-native';
 
 import SupaImage from './SupaImage';
+
+import { supabase } from '~/utils/supabase';
 
 export default function EventListItem({ event }) {
 

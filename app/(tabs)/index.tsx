@@ -1,7 +1,7 @@
 import * as Location from 'expo-location';
 import { Stack } from 'expo-router';
 import React, { useEffect, useState } from 'react';
-import { Alert, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 
 import EventListItem from '../../components/EventListItem';
 
